@@ -2,9 +2,9 @@
 
 # Ollama + Open WebUI
 
-Sample docker-compose file for running [Ollama](https://ollama.com) and [Open WebUI](https://openwebui.com).
+Single docker-compose file for running ready to use [Ollama](https://ollama.com) and [Open WebUI](https://openwebui.com).
 
-The idea is to set up and run both services in one command without using command line tools.
+The idea is to set up and run both services in one config file.
 
 ## Requirements
 
