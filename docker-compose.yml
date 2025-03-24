@@ -1,0 +1,32 @@
+services:
+  ollama:
+    image: ollama/ollama:latest
+    entrypoint:
+      [
+        "/bin/bash",
+        "-c",
+        "ollama serve & sleep 5 && ollama pull deepseek-r1:1.5b && wait",
+      ]
+    environment:
+      - OLLAMA_KEEP_ALIVE="24h"
+    volumes:
+      - ollama-storage:/root/.ollama
+    ports:
+      - "11434:11434"
+    restart: unless-stopped
+
+  webui:
+    image: ghcr.io/open-webui/open-webui:latest
+    environment:
+      - OLLAMA_API_URL="http://ollama:11434"
+    volumes:
+      - webui-storage:/app/backend/data
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    depends_on:
+      - ollama
+
+volumes:
+  ollama-storage:
+  webui-storage:
