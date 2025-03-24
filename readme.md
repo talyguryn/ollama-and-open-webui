@@ -6,6 +6,8 @@ Single docker-compose file for running ready to use [Ollama](https://ollama.com)
 
 The idea is to set up and run both services in one config file.
 
+![](./assets/demo.png)
+
 ## Requirements
 
 Make sure you have installed [Docker](https://docs.docker.com/get-docker/) with Docker Compose.
