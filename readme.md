@@ -1,8 +1,8 @@
 ![](./assets/banner.png)
 
-# Ollama + Open WebUI
+# Ollama + Open WebUI + SearXNG
 
-Single docker-compose file for running ready to use [Ollama](https://ollama.com) and [Open WebUI](https://openwebui.com).
+Single docker-compose file for running ready to use [Ollama](https://ollama.com), [Open WebUI](https://openwebui.com), [SearXNG](https://docs.searxng.org).
 
 The idea is to set up and run both services in one config file.
 
